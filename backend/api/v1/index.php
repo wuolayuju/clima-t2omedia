@@ -21,6 +21,14 @@ $capsule->getContainer()->singleton(
     App\Exceptions\Handler::class
 );
 
+// Monolog Logger
+$container['logger'] = function($c) {
+    $logger = new \Monolog\Logger('my_logger');
+    $file_handler = new \Monolog\Handler\StreamHandler('../logs/app.log');
+    $logger->pushHandler($file_handler);
+    return $logger;
+};
+
 // OpenWeatherMap
 $container['openweathermap'] = function ($container) {
     $owm_config = include('./src/openweathermap/config/owm_config.php');

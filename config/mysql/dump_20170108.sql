@@ -16,6 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `ct_city`
+--
+
+DROP TABLE IF EXISTS `ct_city`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ct_city` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ct_city`
+--
+
+LOCK TABLES `ct_city` WRITE;
+/*!40000 ALTER TABLE `ct_city` DISABLE KEYS */;
+INSERT INTO `ct_city` VALUES (2509954,'Valencia'),(2510409,'Toledo'),(2511174,'Santa Cruz de Tenerife'),(2513917,'Merida'),(2513947,'Melilla'),(2515270,'Las Palmas de Gran Canaria'),(2516395,'Jaen'),(2516548,'Huelva'),(2517117,'Granada'),(2519240,'Cordoba'),(2519402,'Ciudad Real'),(2519582,'Ceuta'),(2519752,'Castello de la Plana'),(2520610,'Provincia de Cáceres'),(2521420,'Badajoz'),(2521886,'Almeria'),(2521978,'Alicante'),(2522258,'Albacete'),(3104324,'Zaragoza'),(3104342,'Zamora'),(3104499,'Vitoria-Gasteiz'),(3106672,'Valladolid'),(3108126,'Teruel'),(3108288,'Tarragona'),(3108681,'Soria'),(3109256,'Segovia'),(3109642,'Santiago de Compostela'),(3109718,'Santander'),(3110044,'San Sebastian'),(3111108,'Salamanca'),(3113209,'Pontevedra'),(3114472,'Pamplona'),(3114531,'Palencia'),(3114711,'Oviedo'),(3114965,'Ourense'),(3117735,'Madrid'),(3117814,'Lugo'),(3119841,'A Coruna'),(3120514,'Huesca'),(3121070,'Guadalajara'),(3121456,'Girona'),(3124132,'Cuenca'),(3127461,'Burgos'),(3128026,'Bilbao'),(6355234,'Murcia'),(6355632,'Ávila'),(6356055,'Barcelona'),(6356927,'Cádiz'),(6359078,'Logroño'),(6359472,'Málaga'),(6361046,'Seville'),(6362996,'León'),(6533961,'Palma de Mallorca'),(7874189,'Lérida');
+/*!40000 ALTER TABLE `ct_city` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `ct_cache`
 --
 
@@ -39,29 +63,7 @@ LOCK TABLES `ct_cache` WRITE;
 /*!40000 ALTER TABLE `ct_cache` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `ct_city`
---
 
-DROP TABLE IF EXISTS `ct_city`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ct_city` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `ct_city`
---
-
-LOCK TABLES `ct_city` WRITE;
-/*!40000 ALTER TABLE `ct_city` DISABLE KEYS */;
-INSERT INTO `ct_city` VALUES (2509954,'Valencia'),(2510409,'Toledo'),(2511174,'Santa Cruz de Tenerife'),(2513917,'Merida'),(2513947,'Melilla'),(2515270,'Las Palmas de Gran Canaria'),(2516395,'Jaen'),(2516548,'Huelva'),(2517117,'Granada'),(2519240,'Cordoba'),(2519402,'Ciudad Real'),(2519582,'Ceuta'),(2519752,'Castello de la Plana'),(2520610,'Provincia de Cáceres'),(2521420,'Badajoz'),(2521886,'Almeria'),(2521978,'Alicante'),(2522258,'Albacete'),(3104324,'Zaragoza'),(3104342,'Zamora'),(3104499,'Vitoria-Gasteiz'),(3106672,'Valladolid'),(3108126,'Teruel'),(3108288,'Tarragona'),(3108681,'Soria'),(3109256,'Segovia'),(3109642,'Santiago de Compostela'),(3109718,'Santander'),(3110044,'San Sebastian'),(3111108,'Salamanca'),(3113209,'Pontevedra'),(3114472,'Pamplona'),(3114531,'Palencia'),(3114711,'Oviedo'),(3114965,'Ourense'),(3117735,'Madrid'),(3117814,'Lugo'),(3119841,'A Coruna'),(3120514,'Huesca'),(3121070,'Guadalajara'),(3121456,'Girona'),(3124132,'Cuenca'),(3127461,'Burgos'),(3128026,'Bilbao'),(6355234,'Murcia'),(6355632,'Ávila'),(6356055,'Barcelona'),(6356927,'Cádiz'),(6359078,'Logroño'),(6359472,'Málaga'),(6361046,'Seville'),(6362996,'León'),(6533961,'Palma de Mallorca'),(7874189,'Lérida');
-/*!40000 ALTER TABLE `ct_city` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `ct_forecast`
