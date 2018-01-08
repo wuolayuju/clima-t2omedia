@@ -1,5 +1,9 @@
 <?php
 
+require_once './src/models/City.php';
+require_once './src/models/Cache.php';
+require_once './src/models/Forecast.php';
+
 class OpenWeatherMap
 {
     private $API_KEY = '';
@@ -25,11 +29,43 @@ class OpenWeatherMap
 
     public function getWeather( $city_id )
     {
-        $url = $this->FORECAST_URL . "id=$city_id&units=metric&appid=$this->API_KEY";
+        $cache = Cache::find( $city_id );
+        $forecast_result = array();
 
-        $result_raw = $this->executeQuery( $url );
+        if( $cache == null ) {
+            $url = $this->FORECAST_URL . "id=$city_id&units=metric&appid=$this->API_KEY";
 
-        return $this->curateForecast($result_raw);
+            $result_raw = $this->executeQuery( $url );
+            $result_assoc = json_decode($result_raw, TRUE);
+
+            $cache = new Cache;
+            $cache->id_city = $result_assoc['city']['id'];
+            $cache->cache_time = 600;
+            $cache->save();
+
+            $forecast = new Forecast;
+            $forecast->id_city = $result_assoc['city']['id'];
+            $forecast->timestamp = $result_assoc['list'][0]['dt_txt'];
+            $forecast->temperature = $result_assoc['list'][0]['main']['temp'];
+            $forecast->save();
+
+            $forecast_result = $this->curateForecast($result_raw);
+        } else {
+            $forecast = Forecast::find( $city_id );
+            $city = $cache->city;
+            $forecast_result = array(
+                "city" => array(
+                    "id"    => $city->id,
+                    "name"  => $city->name
+                ),
+                "forecasts" => array(
+                    "timestamp"     => $forecast->timestamp,
+                    "temperature"   => $forecast->temperature
+                )
+            );
+        }
+
+        return $forecast_result;
     }
 
     private function executeQuery( $url ) {

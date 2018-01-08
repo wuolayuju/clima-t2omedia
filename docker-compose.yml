@@ -1,0 +1,25 @@
+version: '2'
+services:
+  phpserver:
+    build: ./config/php
+    container_name: clima-t2omedia-web
+    volumes:
+      - ./backend:/var/www/html/
+    ports:
+      - "80:80"
+      - "8000:8000"
+      - "443:443"
+    links:
+      - db
+  db:
+    build: ./config/mysql
+    container_name: clima-t2omedia-mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./var/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=clima_t2omedia
+      - MYSQL_USER=clima_t2o
+      - MYSQL_PASSWORD=clima_t2o
+      - MYSQL_ROOT_PASSWORD=clima_t2o

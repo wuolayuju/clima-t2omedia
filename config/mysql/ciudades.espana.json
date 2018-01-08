@@ -1,0 +1,488 @@
+[
+  {
+    "id": 3117735,
+    "name": "Madrid",
+    "country": "ES",
+    "coord": {
+      "lon": -3.70256,
+      "lat": 40.4165
+    }
+  },
+  {
+    "id": 6356055,
+    "name": "Barcelona",
+    "country": "ES",
+    "coord": {
+      "lon": 2.12804,
+      "lat": 41.399422
+    }
+  },
+  {
+    "id": 2509954,
+    "name": "Valencia",
+    "country": "ES",
+    "coord": {
+      "lon": -0.37739,
+      "lat": 39.469749
+    }
+  },
+  {
+    "id": 6361046,
+    "name": "Seville",
+    "country": "ES",
+    "coord": {
+      "lon": -5.95918,
+      "lat": 37.391411
+    }
+  },
+  {
+    "id": 3104324,
+    "name": "Zaragoza",
+    "country": "ES",
+    "coord": {
+      "lon": -0.87734,
+      "lat": 41.656059
+    }
+  },
+  {
+    "id": 6359472,
+    "name": "Málaga",
+    "country": "ES",
+    "coord": {
+      "lon": -4.39717,
+      "lat": 36.758541
+    }
+  },
+  {
+    "id": 6355234,
+    "name": "Murcia",
+    "country": "ES",
+    "coord": {
+      "lon": -1.14146,
+      "lat": 37.986622
+    }
+  },
+  {
+    "id": 6533961,
+    "name": "Palma de Mallorca",
+    "country": "ES",
+    "coord": {
+      "lon": 2.64745,
+      "lat": 39.569511
+    }
+  },
+  {
+    "id": 2515270,
+    "name": "Las Palmas de Gran Canaria",
+    "country": "ES",
+    "coord": {
+      "lon": -15.41343,
+      "lat": 28.09973
+    }
+  },
+  {
+    "id": 3128026,
+    "name": "Bilbao",
+    "country": "ES",
+    "coord": {
+      "lon": -2.92528,
+      "lat": 43.262711
+    }
+  },
+  {
+    "id": 2521978,
+    "name": "Alicante",
+    "country": "ES",
+    "coord": {
+      "lon": -0.48149,
+      "lat": 38.345169
+    }
+  },
+  {
+    "id": 2519240,
+    "name": "Cordoba",
+    "country": "ES",
+    "coord": {
+      "lon": -4.76667,
+      "lat": 37.883331
+    }
+  },
+  {
+    "id": 3106672,
+    "name": "Valladolid",
+    "country": "ES",
+    "coord": {
+      "lon": -4.72372,
+      "lat": 41.655182
+    }
+  },
+  {
+    "id": 3104499,
+    "name": "Vitoria-Gasteiz",
+    "country": "ES",
+    "coord": {
+      "lon": -2.66667,
+      "lat": 42.849998
+    }
+  },
+  {
+    "id": 3119841,
+    "name": "A Coruna",
+    "country": "ES",
+    "coord": {
+      "lon": -8.396,
+      "lat": 43.371349
+    }
+  },
+  {
+    "id": 2517117,
+    "name": "Granada",
+    "country": "ES",
+    "coord": {
+      "lon": -3.60667,
+      "lat": 37.188171
+    }
+  },
+  {
+    "id": 3114711,
+    "name": "Oviedo",
+    "country": "ES",
+    "coord": {
+      "lon": -5.84476,
+      "lat": 43.360291
+    }
+  },
+  {
+    "id": 2511174,
+    "name": "Santa Cruz de Tenerife",
+    "country": "ES",
+    "coord": {
+      "lon": -16.25462,
+      "lat": 28.468241
+    }
+  },
+  {
+    "id": 3114472,
+    "name": "Pamplona",
+    "country": "ES",
+    "coord": {
+      "lon": -1.64323,
+      "lat": 42.816872
+    }
+  },
+  {
+    "id": 2521886,
+    "name": "Almeria",
+    "country": "ES",
+    "coord": {
+      "lon": -2.45974,
+      "lat": 36.838139
+    }
+  },
+  {
+    "id": 3110044,
+    "name": "San Sebastian",
+    "country": "ES",
+    "coord": {
+      "lon": -1.97499,
+      "lat": 43.312832
+    }
+  },
+  {
+    "id": 3127461,
+    "name": "Burgos",
+    "country": "ES",
+    "coord": {
+      "lon": -3.7,
+      "lat": 42.349998
+    }
+  },
+  {
+    "id": 2522258,
+    "name": "Albacete",
+    "country": "ES",
+    "coord": {
+      "lon": -1.85,
+      "lat": 38.98333
+    }
+  },
+  {
+    "id": 3109718,
+    "name": "Santander",
+    "country": "ES",
+    "coord": {
+      "lon": -3.80444,
+      "lat": 43.464722
+    }
+  },
+  {
+    "id": 2519752,
+    "name": "Castello de la Plana",
+    "country": "ES",
+    "coord": {
+      "lon": -0.03333,
+      "lat": 39.98333
+    }
+  },
+  {
+    "id": 6359078,
+    "name": "Logroño",
+    "country": "ES",
+    "coord": {
+      "lon": -2.44541,
+      "lat": 42.467121
+    }
+  },
+  {
+    "id": 2521420,
+    "name": "Badajoz",
+    "country": "ES",
+    "coord": {
+      "lon": -6.97061,
+      "lat": 38.877892
+    }
+  },
+  {
+    "id": 2516548,
+    "name": "Huelva",
+    "country": "ES",
+    "coord": {
+      "lon": -6.95083,
+      "lat": 37.258331
+    }
+  },
+  {
+    "id": 3111108,
+    "name": "Salamanca",
+    "country": "ES",
+    "coord": {
+      "lon": -5.65,
+      "lat": 40.966671
+    }
+  },
+  {
+    "id": 7874189,
+    "name": "Lérida",
+    "country": "ES",
+    "coord": {
+      "lon": 0.62556,
+      "lat": 41.613892
+    }
+  },
+  {
+    "id": 3108288,
+    "name": "Tarragona",
+    "country": "ES",
+    "coord": {
+      "lon": 1.25,
+      "lat": 41.116669
+    }
+  },
+  {
+    "id": 6362996,
+    "name": "León",
+    "country": "ES",
+    "coord": {
+      "lon": -5.56716,
+      "lat": 42.57357
+    }
+  },
+  {
+    "id": 6356927,
+    "name": "Cádiz",
+    "country": "ES",
+    "coord": {
+      "lon": -6.26843,
+      "lat": 36.500881
+    }
+  },
+  {
+    "id": 2516395,
+    "name": "Jaen",
+    "country": "ES",
+    "coord": {
+      "lon": -3.78333,
+      "lat": 37.76667
+    }
+  },
+  {
+    "id": 3114965,
+    "name": "Ourense",
+    "country": "ES",
+    "coord": {
+      "lon": -7.85,
+      "lat": 42.333328
+    }
+  },
+  {
+    "id": 3121456,
+    "name": "Girona",
+    "country": "ES",
+    "coord": {
+      "lon": 2.82493,
+      "lat": 41.983109
+    }
+  },
+  {
+    "id": 3117814,
+    "name": "Lugo",
+    "country": "ES",
+    "coord": {
+      "lon": -7.56667,
+      "lat": 43
+    }
+  },
+  {
+    "id": 3109642,
+    "name": "Santiago de Compostela",
+    "country": "ES",
+    "coord": {
+      "lon": -8.54569,
+      "lat": 42.88052
+    }
+  },
+{
+    "id": 2520610,
+    "name": "Provincia de Cáceres",
+    "country": "ES",
+    "coord": {
+      "lon": -6.37482,
+      "lat": 39.522049
+    }
+  },
+  {
+    "id": 2513947,
+    "name": "Melilla",
+    "country": "ES",
+    "coord": {
+      "lon": -2.93833,
+      "lat": 35.29369
+    }
+  },
+  {
+    "id": 2519582,
+    "name": "Ceuta",
+    "country": "ES",
+    "coord": {
+      "lon": -5.3075,
+      "lat": 35.890282
+    }
+  },
+  {
+    "id": 3121070,
+    "name": "Guadalajara",
+    "country": "ES",
+    "coord": {
+      "lon": -3.16667,
+      "lat": 40.633331
+    }
+  },
+  {
+    "id": 2510409,
+    "name": "Toledo",
+    "country": "ES",
+    "coord": {
+      "lon": -4.02263,
+      "lat": 39.858101
+    }
+  },
+  {
+    "id": 3113209,
+    "name": "Pontevedra",
+    "country": "ES",
+    "coord": {
+      "lon": -8.64435,
+      "lat": 42.431
+    }
+  },
+  {
+    "id": 3114531,
+    "name": "Palencia",
+    "country": "ES",
+    "coord": {
+      "lon": -4.53333,
+      "lat": 42.01667
+    }
+  },
+  {
+    "id": 2519402,
+    "name": "Ciudad Real",
+    "country": "ES",
+    "coord": {
+      "lon": -3.93333,
+      "lat": 38.98333
+    }
+  },
+  {
+    "id": 3104342,
+    "name": "Zamora",
+    "country": "ES",
+    "coord": {
+      "lon": -5.75,
+      "lat": 41.5
+    }
+  },
+  {
+    "id": 2513917,
+    "name": "Merida",
+    "country": "ES",
+    "coord": {
+      "lon": -6.34366,
+      "lat": 38.916111
+    }
+  },
+  {
+    "id": 6355632,
+    "name": "Ávila",
+    "country": "ES",
+    "coord": {
+      "lon": -4.66064,
+      "lat": 40.66864
+    }
+  },
+  {
+    "id": 3124132,
+    "name": "Cuenca",
+    "country": "ES",
+    "coord": {
+      "lon": -2.13333,
+      "lat": 40.066669
+    }
+  },
+  {
+    "id": 3120514,
+    "name": "Huesca",
+    "country": "ES",
+    "coord": {
+      "lon": -0.4087,
+      "lat": 42.13615
+    }
+  },
+  {
+    "id": 3109256,
+    "name": "Segovia",
+    "country": "ES",
+    "coord": {
+      "lon": -4.11667,
+      "lat": 40.950001
+    }
+  },
+  {
+    "id": 3108681,
+    "name": "Soria",
+    "country": "ES",
+    "coord": {
+      "lon": -2.46883,
+      "lat": 41.764011
+    }
+  },
+  {
+    "id": 3108126,
+    "name": "Teruel",
+    "country": "ES",
+    "coord": {
+      "lon": -1.10646,
+      "lat": 40.3456
+    }
+  }
+]
