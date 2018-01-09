@@ -38,8 +38,9 @@ class OpenWeatherMap
             $forecast_result = $this->getWeatherFromAPI( $city_id);
 
         } else {
-            if ( $cache->expiry < strtotime("now")) {
+            if ( strtotime($cache->expiry) < strtotime("now")) {
 
+                $cache->delete();
                 $forecast_result = $this->getWeatherFromAPI( $city_id);
 
             } else {
@@ -92,7 +93,7 @@ class OpenWeatherMap
 
       $cache = new Cache;
       $cache->id_city = $result_assoc['city']['id'];
-      $cache->expiry = date("Y-m-d H:i:s", strtotime('+30 seconds', strtotime("now")));
+      $cache->expiry = date("Y-m-d H:i:s", strtotime('+10 minutes', strtotime("now")));
       $cache->save();
 
       $forecast_result = array(

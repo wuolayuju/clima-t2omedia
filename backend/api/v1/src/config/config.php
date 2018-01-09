@@ -5,7 +5,7 @@ return [
   'displayErrorDetails' => true,
   'db' => [
     'driver' => 'mysql',
-    'host' => 'localhost',
+    'host' => 'db',
     'port' => '3306',
     'database' => 'clima_t2omedia',
     'username' => 'clima_t2o',
