@@ -4,7 +4,8 @@ services:
     build: ./config/php
     container_name: clima-t2omedia-web
     volumes:
-      - ./backend:/var/www/html/
+      - ./backend:/var/www/html/backend/
+      - ./frontend/dist:/var/www/html/frontend/
     ports:
       - "80:80"
       - "8000:8000"
