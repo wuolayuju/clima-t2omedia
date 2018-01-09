@@ -4,6 +4,8 @@ require './vendor/autoload.php';
 require './src/handlers/exception.php';
 
 require './src/openweathermap/OpenWeatherMap.php';
+require './src/controllers/city_controller.php';
+
 
 $config = include('./src/config/config.php');
 $app = new \Slim\App(['settings'=> $config]);
@@ -51,6 +53,12 @@ $app->get('/weather/{id}', function ($request, $response, $args) {
     $resp = $owm->getWeather( $city_id );
 
     return $response->withJson($resp);
+});
+
+$app->group('/city', function () {
+    $this->get('', \CityController::class . ':allCities');
+
+    $this->get('/{id}', \CityController::class . ':getCity');
 });
 
 
