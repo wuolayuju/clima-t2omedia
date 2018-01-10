@@ -15,16 +15,48 @@ export class EvolutionComponent implements OnInit {
     cities:any[] = [];
     selectedCity:any;
 
-    chart:any[] = [];
+    chart:Chart;
 
     constructor( public _openWeatherService:OpenweatherService ) { }
 
     ngOnInit() {
         this._openWeatherService.getAllCities()
-        .subscribe( data => {
+          .subscribe( data => {
             this.cities = data;
-            this.selectedCity = this.cities[0].id;
-        })
+            this.selectedCity = this.cities[0].id
+          });
+
+          this.chart = new Chart('canvas', {
+              type: 'line',
+              data: {
+                  labels: [],
+                  datasets: [
+                      {
+                          data: [],
+                          borderColor: "#3cba9f",
+                          fill: false,
+                          pointRadius: 5
+                      }
+                  ]
+              },
+              options: {
+                  title: {
+                      display: true,
+                      text:[]
+                  },
+                  legend: {
+                      display: false
+                  },
+                  scales: {
+                      xAxes: [{
+                          display: true
+                      }],
+                      yAxes: [{
+                          display: true
+                      }],
+                  }
+              }
+          });
     }
 
     selectCity(newCity) {
@@ -35,37 +67,42 @@ export class EvolutionComponent implements OnInit {
             let forecastTemps = data['forecasts'].map(res => res.temperature);
             let forecastDates = data['forecasts'].map(res => res.timestamp);
 
-            this.chart = new Chart('canvas', {
-                type: 'line',
-                data: {
-                    labels: forecastDates,
-                    datasets: [
-                        {
-                            data: forecastTemps,
-                            borderColor: "#3cba9f",
-                            fill: false,
-                            pointRadius: 5
-                        }
-                    ]
-                },
-                options: {
-                    title: {
-                        display: true,
-                        text: data.city.name
-                    },
-                    legend: {
-                        display: false
-                    },
-                    scales: {
-                        xAxes: [{
-                            display: true
-                        }],
-                        yAxes: [{
-                            display: true
-                        }],
-                    }
-                }
-            });
+            this.chart.data.labels = forecastDates;
+            this.chart.data.datasets[0].data = forecastTemps;
+            this.chart.options.title.text = data.city.name;
+            this.chart.update();
+
+            // this.chart = new Chart('canvas', {
+            //     type: 'line',
+            //     data: {
+            //         labels: forecastDates,
+            //         datasets: [
+            //             {
+            //                 data: forecastTemps,
+            //                 borderColor: "#3cba9f",
+            //                 fill: false,
+            //                 pointRadius: 5
+            //             }
+            //         ]
+            //     },
+            //     options: {
+            //         title: {
+            //             display: true,
+            //             text: data.city.name
+            //         },
+            //         legend: {
+            //             display: false
+            //         },
+            //         scales: {
+            //             xAxes: [{
+            //                 display: true
+            //             }],
+            //             yAxes: [{
+            //                 display: true
+            //             }],
+            //         }
+            //     }
+            // });
         })
     }
 

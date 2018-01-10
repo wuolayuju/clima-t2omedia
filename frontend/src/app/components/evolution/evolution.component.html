@@ -9,9 +9,10 @@
                     <option *ngFor="let city of cities" [value]="city.id">{{ city.name }}</option>
                 </select>
             </div>
-            <div *ngIf="chart">
+            <canvas id="canvas"></canvas>
+            <!-- <div *ngIf="chart">
                 <canvas id="canvas">{{ chart }}</canvas>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

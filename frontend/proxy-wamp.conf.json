@@ -1,0 +1,12 @@
+{
+  "/backend": {
+     "target":  {
+       "host": "clima-t2omedia",
+       "protocol": "http:",
+       "port": 80
+     },
+     "secure": false,
+     "changeOrigin": true,
+     "logLevel": "info"
+  }
+}
