@@ -27,7 +27,7 @@ class OpenWeatherMap
         return $this->executeQuery( $this->SAMPLE_URL );
     }
 
-    public function getWeather( $city_id )
+    public function getWeather( $city_id, $compact = false )
     {
         date_default_timezone_set('Europe/Madrid');
         $cache = Cache::find( $city_id );
@@ -65,6 +65,35 @@ class OpenWeatherMap
                 array_push($forecast_result['forecasts'], $weather);
               }
             }
+        }
+
+        if ( $compact ) {
+            $current_date = date('Y-m-d', strtotime($forecast_result['forecasts'][0]['timestamp']));
+            $current_temp = $forecast_result['forecasts'][0]['temperature'];
+            $current_mean = $current_temp;
+            $current_count = 0;
+
+            $forecast_compact = array();
+            foreach ($forecast_result['forecasts'] as $fc) {
+
+                $next_date = date('Y-m-d', strtotime($fc['timestamp']));
+
+                if (strtotime($next_date) == strtotime($current_date)) {
+                    $current_mean = $current_mean + $fc['temperature'];
+                    $current_count = $current_count + 1;
+                } else {
+                    $current_mean = $current_mean / $current_count;
+                    array_push($forecast_compact, array(
+                        "timestamp"     => $current_date,
+                        "temperature"   => $current_mean
+                    ));
+                    $current_date = $next_date;
+                    $current_mean = 0;
+                    $current_count = 0;
+                }
+            }
+
+            $forecast_result['forecasts'] = $forecast_compact;
         }
 
         return $forecast_result;

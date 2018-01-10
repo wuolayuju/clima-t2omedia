@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { OpenweatherService } from "../../services/openweather.service";
+
 @Component({
   selector: 'app-forecast',
   templateUrl: './forecast.component.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForecastComponent implements OnInit {
 
-  constructor() { }
+  constructor( public _openWeatherService:OpenweatherService ) { }
 
   ngOnInit() {
+      this._openWeatherService.getForecastByCity(3117735, true)
+        .subscribe( data => {
+            console.log(data);
+        })
   }
 
 }

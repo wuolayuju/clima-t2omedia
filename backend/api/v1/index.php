@@ -51,9 +51,19 @@ $app->get('/weather/{id}', function ($request, $response, $args) {
 
     $city_id = $args['id'];
     $owm = $this->get('openweathermap');
-    $resp = $owm->getWeather( $city_id );
+
+    $compact = array_key_exists('compact', $request->getQueryParams());
+    $resp = $owm->getWeather( $city_id, $compact );
 
     return $response->withJson($resp);
+});
+
+$app->get('/sample-query/{id}', function ($request, $response, $args) {
+
+    $uri = $request->getUri();
+    $query = $request->getQueryParams();
+    return $response->getBody()->write($query_string);
+    // return $response->getBody()->write($uri->getQuery());
 });
 
 $app->group('/city', function () {
