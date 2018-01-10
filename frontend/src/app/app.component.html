@@ -1,21 +1,3 @@
-<nav class="navbar navbar-dark bg-dark">
-    <span class="navbar-brand mb-0 h1">Clima T2OMedia</span>
-</nav>
+<app-navigation></app-navigation>
 
-<div class="container top-30">
-    <div class="row">
-        <div class="col-sm">
-            <div class="form-group">
-                <label>Ciudad</label>
-                <select [ngModel]="selectedCity" (ngModelChange)="selectCity($event)"
-                    name="city"
-                    class="form-control">
-                    <option *ngFor="let city of cities" [value]="city.id">{{ city.name }}</option>
-                </select>
-            </div>
-            <div *ngIf="chart">
-                <canvas id="canvas">{{ chart }}</canvas>
-            </div>
-        </div>
-    </div>
-</div>
+<router-outlet></router-outlet>
