@@ -39,6 +39,7 @@ $container['openweathermap'] = function ($container) {
 };
 
 // Routes
+
 $app->get('/sample-weather', function ($request, $response, $args) {
 
     $owm = $this->get('openweathermap');
@@ -60,6 +61,5 @@ $app->group('/city', function () {
 
     $this->get('/{id}', \CityController::class . ':getCity');
 });
-
 
 $app->run();

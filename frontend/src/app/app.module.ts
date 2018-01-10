@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from "@angular/http";
+import { FormsModule } from '@angular/forms';
 
 // Services
 import { OpenweatherService } from "./services/openweather.service";
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [
       OpenweatherService

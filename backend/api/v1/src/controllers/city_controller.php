@@ -13,7 +13,7 @@ class CityController
 
    public function allCities($request, $response) {
 
-       $cities = City::all();
+       $cities = City::orderBy('name')->get();
 
        return $response->withJson($cities->toArray());
    }
