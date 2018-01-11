@@ -71,38 +71,6 @@ export class EvolutionComponent implements OnInit {
             this.chart.data.datasets[0].data = forecastTemps;
             this.chart.options.title.text = data.city.name;
             this.chart.update();
-
-            // this.chart = new Chart('canvas', {
-            //     type: 'line',
-            //     data: {
-            //         labels: forecastDates,
-            //         datasets: [
-            //             {
-            //                 data: forecastTemps,
-            //                 borderColor: "#3cba9f",
-            //                 fill: false,
-            //                 pointRadius: 5
-            //             }
-            //         ]
-            //     },
-            //     options: {
-            //         title: {
-            //             display: true,
-            //             text: data.city.name
-            //         },
-            //         legend: {
-            //             display: false
-            //         },
-            //         scales: {
-            //             xAxes: [{
-            //                 display: true
-            //             }],
-            //             yAxes: [{
-            //                 display: true
-            //             }],
-            //         }
-            //     }
-            // });
         })
     }
 

@@ -1,13 +1,22 @@
 <div class="container top-30">
     <div class="row">
-      <div class="form-group">
-          <label>Fecha</label>
-          <select  [ngModel]="selectedDate" (ngModelChange)="selectDate($event)"
-              name="dateForecast"
-              class="form-control">
-              <option *ngFor="let date of dates" [value]="date">{{date | date:'yyyy-MM-dd'}}</option>
-          </select>
-      </div>
-      <canvas id="canvasForecast" height="200"></canvas>
+        <div class="col-md-12">
+            <h3>Previsión por fecha <small class="text-muted">Todas las ciudades</small></h3>
+            <hr>
+
+            <div class="form-group">
+                <label>Fecha</label>
+                <select  [ngModel]="selectedDate" (ngModelChange)="selectDate($event)"
+                    name="dateForecast"
+                    class="form-control">
+                    <option *ngFor="let date of dates" [value]="date">{{date | date:'yyyy-MM-dd'}}</option>
+                </select>
+
+            </div>
+
+            <canvas id="canvasForecast" height="200"></canvas>
+        </div>
     </div>
 </div>
+
+<div *ngIf="loadingData" class="loading">Loading&#8230;</div>
