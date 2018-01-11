@@ -20,7 +20,7 @@ export class ForecastComponent implements OnInit {
 
     chart:Chart;
 
-    selectedDate:Date;
+    selectedDate:string;
 
     constructor( public _openWeatherService:OpenweatherService ) {
         this._openWeatherService.getAllCities()
@@ -102,15 +102,11 @@ export class ForecastComponent implements OnInit {
         this.chart.data.datasets[0].data = [];
         this.chart.update();
 
-        this.selectedDate = new Date(newDate);
-        let yearDate = this.selectedDate.getFullYear();
-        let monthDate = ("0" + (this.selectedDate.getMonth() + 1)).slice(-2)
-        let dayDate = ("0" + this.selectedDate.getDate()).slice(-2);
-        let formattedDate = `${yearDate}-${monthDate}-${dayDate}`;
+        this.selectedDate = newDate;
 
         this.forecasts.map(res => {
             res.forecasts.map(fc => {
-                if (fc.timestamp === formattedDate) {
+                if (fc.timestamp === this.selectedDate) {
                     this.chart.data.labels.push(res.city.name);
                     this.chart.data.datasets[0].data.push(fc.temperature);
                     this.chart.update();

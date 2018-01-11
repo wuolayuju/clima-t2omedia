@@ -9,7 +9,7 @@
                 <select  [ngModel]="selectedDate" (ngModelChange)="selectDate($event)"
                     name="dateForecast"
                     class="form-control">
-                    <option *ngFor="let date of dates" [value]="date">{{date | date:'yyyy-MM-dd'}}</option>
+                    <option *ngFor="let date of dates" [value]="date | date:'yyyy-MM-dd'">{{date | date:'yyyy-MM-dd'}}</option>
                 </select>
 
             </div>

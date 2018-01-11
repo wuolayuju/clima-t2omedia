@@ -1,5 +1,46 @@
 <div class="container top-30">
     <div class="row">
-        forecast-table works!
+        <div class="col-sm-12">
+            <h3>Tabla de previsiones <small class="text-muted">Por ciudad</small></h3>
+            <hr>
+        </div>
+        <div class="col-sm-auto">
+            <h4>Filtros</h4>
+            <div class="form-group">
+                <div class="form-check" *ngFor="let city of cities">
+                    <input class="form-check-input" type="checkbox"
+                        [value]="city.id" id="check-{{city.id}}"
+                        (change)="citySelected($event)">
+                    <label class="form-check-label" for="check-{{city.id}}">
+                        {{city.name}}
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <button (click)="exportToXSL()"
+                type="button" class="btn btn-success btn-block" style="margin-bottom: 1em;">
+                Exportar a XSL
+            </button>
+            <table class="table" id="forecast-table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Ciudad</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Predicción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let fc of forecastData">
+                        <td>{{ fc.city.name }}</td>
+                        <td>{{ fc.forecasts[0].timestamp }}</td>
+                        <td>{{ fc.forecasts[0].temperature | number:'.1-1' }}º</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+
+<div *ngIf="loadingData" class="loading">Loading&#8230;</div>
