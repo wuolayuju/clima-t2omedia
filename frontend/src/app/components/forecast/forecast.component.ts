@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { OpenweatherService } from "../../services/openweather.service";
+import { ICity } from "../../interfaces/city.interface";
+import { IForecast } from "../../interfaces/forecast.interface";
 
 import { Chart } from 'chart.js';
 
@@ -15,7 +17,7 @@ export class ForecastComponent implements OnInit {
 
     dates:Date[] = [];
 
-    cities:any[] = [];
+    cities:ICity[] = [];
     forecasts:any[] = [];
 
     chart:Chart;
@@ -24,7 +26,7 @@ export class ForecastComponent implements OnInit {
 
     constructor( public _openWeatherService:OpenweatherService ) {
         this._openWeatherService.getAllCities()
-        .subscribe( data => this.cities = data);
+            .subscribe( data => this.cities = data);
 
         for (let i = 1; i <= 4; i++) {
             let day = new Date();

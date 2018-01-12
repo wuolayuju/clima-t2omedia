@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { OpenweatherService } from "../../services/openweather.service";
-
+import { ICity } from "../../interfaces/city.interface";
 import { Chart } from 'chart.js';
 
 @Component({
@@ -12,8 +12,8 @@ import { Chart } from 'chart.js';
 })
 export class EvolutionComponent implements OnInit {
 
-    cities:any[] = [];
-    selectedCity:any;
+    cities:ICity[] = [];
+    selectedCityId:number;
 
     chart:Chart;
 
@@ -23,7 +23,7 @@ export class EvolutionComponent implements OnInit {
         this._openWeatherService.getAllCities()
           .subscribe( data => {
             this.cities = data;
-            this.selectedCity = this.cities[0].id
+            this.selectedCityId = this.cities[0].id
           });
 
           this.chart = new Chart('canvas', {
@@ -61,8 +61,8 @@ export class EvolutionComponent implements OnInit {
 
     selectCity(newCity) {
         console.log(newCity);
-        this.selectedCity = newCity;
-        this._openWeatherService.getForecastByCity(this.selectedCity)
+        this.selectedCityId = newCity;
+        this._openWeatherService.getForecastByCity(this.selectedCityId)
         .subscribe( data => {
             let forecastTemps = data['forecasts'].map(res => res.temperature);
             let forecastDates = data['forecasts'].map(res => res.timestamp);
